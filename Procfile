@@ -1,1 +1,1 @@
-heroku git:remote -a botmisa
+web: gunicorn app:app
