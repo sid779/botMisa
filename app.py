@@ -8,7 +8,7 @@ TOKEN = bot_token
 bot = telegram.Bot(token = TOKEN)
 
 app = Flask(__name__)
-requests.get()
+
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
@@ -64,5 +64,5 @@ def set_webhook():
 
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(threaded=True)
 
