@@ -26,7 +26,7 @@ def respond():
    if text == "/start":
        # print the welcoming message
        bot_welcome = """
-       Welcome to coolAvatar bot, the bot is using the service from http://avatars.adorable.io/ to generate cool looking avatars based on the name you enter so please enter a name and the bot will reply with an avatar for your name.
+       I'm Misa Amane. Welcome to the heavens.
        """
        # send the welcoming message
        bot.sendMessage(chat_id=chat_id, text=bot_welcome, reply_to_message_id=msg_id)
@@ -36,7 +36,7 @@ def respond():
        try:
            # reply with a photo to the name the user sent,
            # note that you can send photos by url and telegram will fetch it for you
-           bot.sendMessage(chat_id=chat_id, text="Hi honey ❤️\n Why you said" + text, reply_to_message_id=msg_id)
+           bot.sendMessage(chat_id=chat_id, text="Hi honey ❤️\nWhy you said " + text, reply_to_message_id=msg_id)
        except Exception:
            # if things went wrong
            bot.sendMessage(chat_id=chat_id, text="There was a problem in the name you used, please enter different name", reply_to_message_id=msg_id)
